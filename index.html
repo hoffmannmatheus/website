@@ -15,18 +15,16 @@
     <div id="app" class="background clearfix">
 
       <!-- MENU -->
-      <div class="menu clearfix">
-        <div class="menu-item">
-          <router-link to="/">Home</router-link>
-        </div>
-        <div class="menu-item">
-          <router-link to="/showcase">Showcase</router-link>
-        </div>
-        <div class="menu-item">
-          <router-link to="/about">About</router-link>
+      <div class="menu-container">
+        <div class="menu clearfix">
+          <div class="menu-item"><router-link to="/">Hello</router-link></div>
+          <div class="menu-divider"></div>
+          <div class="menu-item"><router-link to="/showcase">Showcase</router-link></div>
+          <div class="menu-divider"></div>
+          <div class="menu-item"><router-link to="/about">About</router-link></div>
         </div>
       </div>
-
+      
       <!-- CONTENT ROUTER -->
       <transition name="fade">
         <router-view class="child-view"></router-view>

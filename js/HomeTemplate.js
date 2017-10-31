@@ -7,7 +7,11 @@
  Vue.component('home', {
   template: `
       <div class="content home clearfix">
-        <h1>Matheus Hoffmann Silva</h1>
+        <div class="center">
+          <h2>Hello, my name is</h2>
+          <h1>Matheus Hoffmann Silva</h1>
+          <h2 class="left">and I like to code.</h2>
+        </div>
       </div>
       `,
   data() {
