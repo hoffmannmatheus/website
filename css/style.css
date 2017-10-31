@@ -1,0 +1,128 @@
+@font-face {
+  font-family: Raleway Regular;
+  src: url("../fonts/Raleway-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Raleway Bold;
+  src: url("../fonts/Raleway-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Raleway Thin;
+  src: url("../fonts/Raleway-Light.ttf") format("truetype");
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: Raleway Regular, Helvetica;
+  background-color: transparent;
+  --menu-height: 40px;
+  --content-margin: 5px;
+}
+
+.background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/**
+ * Top Menu.
+ */
+.menu {
+  position: absolute;
+  height: var(--menu-height);
+  margin: 0 auto;
+  top: var(--menu-height);
+  display: inline;
+  z-index: 3;
+}
+
+.menu-item {
+  margin: var(--content-margin) auto;
+  display: inline-block;
+}
+
+.menu-item img {
+  display: block;
+  margin: 4px auto;
+  opacity: .75;
+}
+
+.menu-item img.active {
+  opacity: 1;
+  transition: all .1s ease;
+  border-radius: 3px;
+  border: 1px solid #444;
+}
+
+.menu-item p {
+  display: block;
+  margin: 4px auto;
+  opacity: .75;
+}
+
+.menu-item p.active {
+  opacity: 1;
+  transition: all .1s ease;
+  border-radius: 3px;
+  border: 1px solid #444;
+}
+
+/**
+ * Content.
+ */
+.content {
+  height: 100%;
+  width: 100%;
+  color: white;
+  z-index: 2;
+  padding: 30px;
+  display: flex;
+}
+
+.content h1 {
+  margin: auto auto;
+  font-size: 28pt;
+}
+
+/**
+ * Content backgrounds.
+ */
+.home {
+  background-color: #00c0ff;
+}
+
+.showcase {
+  background-color: #ff00c0;
+}
+
+.about {
+  background-color: #00ffc0;
+}
+
+/**
+ * Transition between components.
+ */
+ .fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+.child-view {
+  position: absolute;
+  transition: all .5s cubic-bezier(.55,0,.1,1);
+}
+.slide-left-enter, .slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(30px, 0);
+  transform: translate(30px, 0);
+}
+.slide-left-leave-active, .slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-30px, 0);
+  transform: translate(-30px, 0);
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Matheus Hoffmann Silva</title>
+    <link href="js/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="fonts/ionicons.css" rel="stylesheet" type="text/css" />
+    <link href="fonts/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body class="clearfix">
+
+    <div id="app" class="background clearfix">
+
+      <!-- MENU -->
+      <div class="menu clearfix">
+        <div class="menu-item">
+          <router-link to="/">Home</router-link>
+        </div>
+        <div class="menu-item">
+          <router-link to="/showcase">Showcase</router-link>
+        </div>
+        <div class="menu-item">
+          <router-link to="/about">About</router-link>
+        </div>
+      </div>
+
+      <!-- CONTENT ROUTER -->
+      <transition name="fade">
+        <router-view class="child-view"></router-view>
+      </transition>
+
+    </div>
+
+    <script src="js/lib/bootstrap/js/jquery.min.js"></script>
+    <script src="js/lib/fastclick.js"></script>
+    <script src="js/lib/vue.js"></script>
+    <script src="js/lib/vue-router.js"></script>
+
+    <script src="js/HomeTemplate.js"></script>
+    <script src="js/ShowcaseTemplate.js"></script>
+    <script src="js/AboutTemplate.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      console.log("Hi there :-)");
+    </script>
+  </body>
+</html>
